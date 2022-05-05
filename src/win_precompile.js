@@ -9,10 +9,11 @@ const LIFTED_DIR_SUFFIX = '__';
 
 function main() {
   // find path to ROS includes
-  const ROS_PATH = process.env.AMENT_PREFIX_PATH;
-  // const ROS_PATH = '/home/wayne/dev/ros/rclnodejs/fake';
+  let ROS_PATH = process.argv.length > 2 ? 
+    process.argv[3] : process.env.AMENT_PREFIX_PATH;
+  
   if (!ROS_PATH) {
-    throw Error('AMENT_PREFIX_PATH not found');
+    throw Error('Unable to locate ROS installation. AMENT_PREFIX_PATH not found and no commandline arg.');
   }
 
   // ensure the includes/ folder exists and is readable
