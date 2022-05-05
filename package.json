@@ -1,0 +1,24 @@
+{
+  "name": "ros2-win-build-util",
+  "version": "1.0.0",
+  "description": "A precompile utility that reorgs the include header fs of ros2 fat archives for building rclnodejs",
+  "main": "win_precompile.js",
+  "scripts": {
+    "run": "node src/win_precompile.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wayneparrott/ros2-win-build-util.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wayneparrott/ros2-win-build-util/issues"
+  },
+  "homepage": "https://github.com/wayneparrott/ros2-win-build-util#readme",
+  "dependencies": {
+    "fs-extra": "^10.1.0"
+  }
+}
