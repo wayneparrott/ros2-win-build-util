@@ -10,7 +10,7 @@ const LIFTED_DIR_SUFFIX = '__';
 function main() {
   // find path to ROS includes
   let ROS_PATH = process.argv.length > 2 ? 
-    process.argv[3] : process.env.AMENT_PREFIX_PATH;
+    process.argv[2] : process.env.AMENT_PREFIX_PATH;
   
   if (!ROS_PATH) {
     throw Error('Unable to locate ROS installation. AMENT_PREFIX_PATH not found and no commandline arg.');
